@@ -24,15 +24,13 @@ jobs:
 
   build:
   
-    on:
-      workflow_dispatch:
-        inputs:
-          name:
-            type: choice
-            description: Who to greet
-            options: 
-            - VARSHINI
-            - AADVIK
+    inputs:
+        name:
+          type: choice
+          description: Who to greet
+          options: 
+          - VARSHINI
+          - AADVIK
             
     runs-on: ubuntu-latest
     steps:
