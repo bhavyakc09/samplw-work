@@ -22,16 +22,7 @@ jobs:
     - name: Send greeting
       run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", ""]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"
 
-  build:
-  
-    inputs:
-        name:
-          type: choice
-          description: Who to greet
-          options: 
-          - VARSHINI
-          - AADVIK
-            
+  build:        
     runs-on: ubuntu-latest
     steps:
       # Checkout the pull request branch
